@@ -1,0 +1,29 @@
+data "template_file" "user_data" {
+  template           = file("user-data.tpl")
+  vars = {
+    static_public_ip = aws_eip.bastion.public_ip
+    region_name      = var.region
+  }
+  
+  
+!!! ***into LC
+user_data                   = data.template_file.user_data.rendered 
+  
+  
+resource "aws_iam_role" "bastion-role" {
+  name               = "bastion-role"
+  assume_role_policy = file("role-policy.json")
+}
+
+resource "aws_iam_role_policy" "bastion-policy" {
+  name   = "bastion-policy"
+  role   = aws_iam_role.bastion-role.id
+  policy = file("iam-policy.json")
+}
+
+resource "aws_iam_instance_profile" "bastion-profile" {
+  name = "bastion-profile"
+  role = aws_iam_role.bastion-role.name
+}
+
+
