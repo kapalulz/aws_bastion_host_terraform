@@ -13,4 +13,4 @@
 
 ***By deploying the Bastion Host infrastructure through Terraform, organizations can easily create and manage a secure access point to their private network. It simplifies the process of setting up and maintaining the infrastructure, reducing manual effort and increasing operational efficiency.***
 
-Overall, the Bastion Host project enables organizations to establish a secure and highly available server infrastructure for accessing and managing servers within a private network. It provides a robust and scalable solution for secure remote access, enhancing the overall security posture of the organization's infrastructure.***
+***Overall, the Bastion Host project enables organizations to establish a secure and highly available server infrastructure for accessing and managing servers within a private network. It provides a robust and scalable solution for secure remote access, enhancing the overall security posture of the organization's infrastructure.***
