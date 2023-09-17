@@ -1,4 +1,4 @@
-provider "aws" { #encrypted in S3
+provider "aws" { #encrypted
   access_key = "*************************" 
   secret_key = "*************************"
   region = var.region
